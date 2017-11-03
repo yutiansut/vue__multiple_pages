@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>综合查询</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .text {float: none; margin-top: 0; margin-bottom: 0; color: #fff; text-align: center;}
+    .col-center {margin-top: 40px; margin-bottom: 40px;}
+    .btn-3b0 {background-color: #3366cc;}
+    a {color: #000;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand" id="goBack">
+          <img src="../../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="navbar-text">综合查询</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix b1 lh39">
+      <div class="nav-blank1 row"></div>
+      <a href="margin-en-his.html"><div class="row status-row">历史委托<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-dl-his.html"><div class="row status-row">历史成交<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-db.html"><div class="row status-row">查询担保证券<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-bd.html"><div class="row status-row">查询标的证券<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <!--<a href="margin-credit-debt.html"><div class="row status-row">查询信用负债汇总<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>-->
+      <a href="margin-rz.html"><div class="row status-row">融资明细<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-rq.html"><div class="row status-row">融券明细<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-debt-recd.html"><div class="row status-row">负债流水<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-kzdb.html"><div class="row status-row">可转入担保证券查询<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-asset.html"><div class="row status-row">信用资产查询<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+      <a href="margin-kr.html"><div class="row status-row">可融证券查询<img src="../../images/more.png" class="pull-right" height="16" style="margin-top:12px;"></div></a>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script>
+    if (typeof pbE == 'undefined') {
+      $('#goBack').click(function () {
+        location.href = document.referrer;
+      })
+    } else{
+      $('#goBack').click(function () {
+        location.href = 'goBack';
+      })
+    }
+  </script>
+</body>
+</html>

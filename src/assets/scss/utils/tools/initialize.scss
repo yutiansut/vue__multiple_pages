@@ -1,0 +1,159 @@
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-width: 320px;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  background: $color22;
+}
+
+.pb-multi-slide {
+  .bottom_modal {
+    div {
+      font-size: $font25;
+      text-align: center;
+      color: $color18;
+      height: toRem(99.5px);
+      line-height: toRem(99px);
+    }
+    div:last-child {
+      color: $color1;
+      height: toRem(87px);
+      line-height: toRem(86px);
+      position: relative;
+      @include border-TTop-color23;
+    }
+  }
+}
+
+.apply_fill, .approval_details {
+  .common-nav {
+    .navbar-footer {
+      & > div > span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: $color15;
+        font-size: $font10;
+        padding-right: toRem(30px);
+        & > span {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          &.c4 {
+            color: $color28;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gengduo {
+  height: toRem(23px);
+  width: toRem(12px);
+}
+
+.annex_list {
+  position: relative;
+  @include border-Bbottom-color23;
+  display: flex;
+  align-items: center;
+  height: toRem(86px);
+  padding-right: toRem(30px);
+  span:nth-of-type(1) {
+    flex: 1;
+    font-size: $font10;
+    color: $color18;
+  }
+  span:nth-of-type(2) {
+    flex: .3;
+    text-align: right;
+    color: $color17;
+    font-size: $font23;
+  }
+  img:nth-of-type(1) {
+    width: toRem(36px);
+    height: toRem(42px);
+    margin-right: toRem(20px);
+  }
+  img:nth-of-type(2) {
+    width: toRem(36px);
+    height: toRem(36px);
+    margin-left: toRem(20px);
+  }
+  img.gengduo {
+    height: toRem(23px);
+    width: toRem(12px);
+  }
+}
+
+.c1 {
+  color: $color1;
+}
+
+.c2 {
+  color: $color17;
+}
+
+.c3 {
+  color: $color52;
+}
+.c4{
+  color: $color47;
+}
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  th, td {
+    //min-width: toRem(200px);
+    white-space: nowrap
+  }
+}
+
+.input {
+  width: 100%;
+  height: toRem(100px);
+  line-height: toRem(100px);
+  border: 0;
+  outline: none;
+  position: relative;
+  border-bottom: 1px solid $color23;
+  font-size: $font33;
+}
+
+.input:last-child {
+  border-bottom: 0;
+}
+
+.button {
+  width: 90%;
+  height: toRem(86px);
+  margin: 0 auto;
+  border: 0;
+  outline: none;
+  border-radius: toRem(8px);
+  color: $color15;
+  font-size: $font25;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: $color47;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $color47;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $color47;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $color47;
+}
+
+.available {
+  background: $color1;
+}

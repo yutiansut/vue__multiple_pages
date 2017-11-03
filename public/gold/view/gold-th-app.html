@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>提货申请</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .nav-stacked>li+li {margin-top: 0;}
+    .nav-stacked>li {border-bottom: none; font-size: 16px;}
+    .nav-stacked>li span {color: darkgray;}
+    .nav-stacked>li:last-child {border-bottom: 1px solid #e4e7f0;}
+    .weight-num {height: 25px; display: inline-block; float: right; color: darkgray;}
+    .weight-num input {border-radius: 3px; width: 60px; height: 30px; border: 1px solid #e4e7f0; font-size: 15px; line-height: 15px;}
+    .number {float: right; border: none;}
+    .number::-webkit-input-placeholder{text-align:right;}
+    .btn-3b0 {background-color: #36c; width: 90%; margin-left: 5%;}
+    .btn-3d0 {background-color: #36c; width: 35%;}
+    .my-modal-dialog input {height: 30px; border-radius: 3px; font-size: 15px; line-height: 15px;}
+    .nav-stacked>li+li a:active {background-color: #fff;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav-header">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand" id="goBack">
+          <img src="../../images/goback.png" alt="返回" />
+        </a>
+      </div>
+      <p class="navbar-text">提货申请</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix a1 lh39">
+      
+        <div class="row" id="stacked-link">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="gold-list.html?name=品种列表&func=9301">品种<div style="float: right;"><span id="type"></span>&nbsp;&nbsp;&nbsp;<img class="more" src="../../images/more.png" alt="详细"></div></a></li>
+          <li><a href="javascript:void(0);">提货重量<div class="weight-num"><input type="number" id="num">克</div></a></li>
+          <li><a href="gold-list.html?name=城市列表&func=9305">城市<div style="float: right;"><span id="city"></span>&nbsp;&nbsp;&nbsp;<img class="more" src="../../images/more.png" alt="详细"></div></a></li>
+          <li><a href="gold-list.html?name=提货模式">提货模式<div style="float: right;"><span id="mode"></span>&nbsp;&nbsp;&nbsp;<img class="more" src="../../images/more.png" alt="详细"></div></a></li>
+          <li><a href="javascript:void(0);">提货人<div style="float: right;"><span id="person"></span></div></a></li>
+          <li><a href="javascript:void(0);">证件类型<div style="float: right;"><span id="id"></span></div></a></li>
+          <li><a href="javascript:void(0);">证件号码<div style="float: right;"><span id="number"></span></div></a></li>
+        </ul>
+      </div>
+      
+      <div class="my-modal hide">
+        <div class="my-modal-backdrop"></div>
+        <div class="my-modal-dialog">
+          <p class="title">设置提货密码</p>
+          <div class="text-center"><input type="password" placeholder="请输入提货密码" id="pwd"><input type="password" placeholder="请再次输入提货密码" id="again"></div>
+          <div class="row btn-bottom" id="logout-modal">
+            <a class="btn btn-3d0" href="javascript:void(0);" onclick="confirm();">确定</a>
+            <a class="btn btn-3d0" href="javascript:void(0);" onclick="cancel();">取消</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="btn-login">
+        <div class="col-center">
+          <a class="btn btn-block btn-3b0" onclick="apply();">确认提货</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/gold-th-app.js"></script>
+</body>
+</html>

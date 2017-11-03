@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>预约查询</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../css/pikaday-package.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .four-title {font-size: 13px; line-height: 30px; background-color: #fff;}
+    #contents .content {margin-top: 0; border-top: none;}
+    #contents .image{padding-top: 17.5px;}
+    #contents .image img {height: 20px;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav-header">
+  </nav>
+  
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="row" id="time-title"></div>
+      <div class="row two-date hide">
+        <div>
+          <input id="date-from" name="date-from">
+          <img src="../../images/funddetail.png" alt="">
+        </div>
+        <div>
+          <input id="date-to" name="date-to">
+          <img src="../../images/funddetail.png" alt="">
+        </div>
+      </div>
+      <div id="title">
+      </div>
+      <div id="contents">
+       <!-- <a href="#">
+          <div class="row content">
+            <div class="col-xs-4 text-left">
+              <p class="c1 lh30">黄金9999</p>
+              <p class="d2 lh25">AU9999</p>
+            </div>
+            <div class="col-xs-4 text-left">
+              <p class="b8 lh27">2016.10.03</p>
+              <p class="b1 lh27">2016.10.30</p>
+            </div>
+            <div class="col-xs-3 text-left">
+              <p class="b1 lh25">10000</p>
+              <p class="b1 lh30">已提</p>
+             </div>
+             <div class="col-xs-1 text-left image">
+              <img src="../images/more.png"/>
+             </div>
+          </div>
+        </a>-->
+      </div>
+      <div id="alert" class="text-center a1 hide" style="margin-top: 10px;">--无数据记录--</div>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/react.min.js"></script>
+  <script src="../../../js/react-dom.min.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/pikaday-package.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/gold-plugins.js"></script>
+  <script src="../js/gold-yy.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>担保品划转</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .col-center {
+      margin-top: 20px;
+    }
+    .btn-3b0, .btn-3d0 {background-color: #3366cc;}
+    #indicate {width: 60%; position: absolute; top: 150px; left: 20%;}
+    #indicate .btn-3b0 {background-color: #e4e4e4; color: #000; height: 50px; line-height: 40px;}
+    .my-modal-dialog input {height: 30px; border-radius: 3px; font-size: 15px; line-height: 15px;}
+    #logout-modal>.btn-3d0 {padding: 3px 15%;}
+    .btn-3d0 {margin-left: 0;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand" id="goBack">
+          <img src="../../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="navbar-text">担保品划转</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix">
+     <!--股东账号，bank-->
+      <div class="row content" style="margin-top: 12px; border-top: 1px solid #e4e7f0;">
+        <div class="col-xs-3 left-title">
+          股东账号
+        </div>
+        <div class="col-xs-6 select bank-div">
+          <div id="bank" class="text-center"></div>
+        </div>
+        <div class="col-xs-3 select bank-div">
+          <img src="../../images/select.png" alt="">
+        </div>
+      </div>
+      <div class="row select-options">
+        <ul class="col-xs-6 option-ul hide" id="bank-ul">
+        </ul>
+      </div>
+      <!--划转方向，currency-->
+      <div class="row content divide">
+        <div class="col-xs-3 left-title">
+          划转方向
+        </div>
+        <div class="col-xs-6 select currency-div">
+          <div id="currency" class="text-center"></div>
+          <input id="direction" type="hidden" value="">
+        </div>
+        <div class="col-xs-3 select currency-div">
+          <img src="../../images/select.png" alt="">
+        </div>
+      </div>
+      <div class="row select-options">
+        <ul class="col-xs-6 option-ul hide" id="currency-ul">
+          <li value="j" id="direction0" class="hover">信用账户->普通账户</li>
+          <li value="i" id="direction1" class="">普通账户->信用账户</li>
+        </ul>
+      </div>
+      <!--证券代码，code-->
+      <div class="row content divide">
+        <div class="col-xs-3 left-title">
+          证券代码
+        </div>
+        <div class="col-xs-6 select code-div">
+          <div id="code" class="text-center"></div>
+          <input id="code-market" type="hidden" value="">
+          <input id="code-account" type="hidden" value="">
+          <input id="code-name" type="hidden" value="">
+          <input id="code-max" type="hidden" value="">
+          <input id="code" type="hidden" value="">
+        </div>
+        <div class="col-xs-3 select code-div">
+          <img src="../../images/select.png" alt="">
+        </div>
+      </div>
+      <div class="row select-options">
+        <ul class="col-xs-6 option-ul hide" id="code-ul">
+        </ul>
+      </div>
+      <!--证券名称，name-->
+      <div class="row content">
+        <div class="col-xs-4 left-title">
+          证券名称
+        </div>
+        <div class="col-xs-8 right-input">
+          <input type="text" placeholder="证券名称" id="name" readonly="readonly">
+        </div>
+      </div>
+      <!--划拨数量，max-->
+      <div class="row content">
+        <div class="col-xs-4 left-title">
+          最大可划拨
+        </div>
+        <div class="col-xs-8 right-input" style="padding-top: 0; padding-bottom: 0; line-height: 50px;">
+          <input readonly="readonly" type="text" placeholder="最大可划拨股数" id="max" style="width: 160px;"><div class="b8 text-center" style="display:inline-block; height: 30px; width: 40px; border: solid 1px #3366cc; line-height: 30px; border-radius: 5px;" id="total" >全部</div>
+        </div>
+      </div>
+      <!--输入数量，num-->
+      <div class="row content">
+        <div class="col-xs-4 left-title">
+          数量
+        </div>
+        <div class="col-xs-8 right-input">
+          <!--<input placeholder="请输入划转股数" id="num" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">-->
+          <input placeholder="请输入划转股数" id="num" type="number">
+        </div>
+      </div>
+      <p style="margin-top:10px;" class="b8">数量单位：股</p>
+      <div class="row">
+        <div class="col-center">
+          <input type="button" class="btn btn-block btn-3b0" value="确定划转" onclick="confirmIn();">
+        </div>
+      </div>
+      <div class="c3 hide" id="error"></div>
+      <div class="my-modal hide">
+        <div class="my-modal-backdrop"></div>
+        <div class="my-modal-dialog">
+          <div class="text-center"><input type="number" placeholder="请输入客户号" id="account"><input type="password" placeholder="请输入交易密码" id="pwd" style="margin-top: 10px;"></div>
+          <div class="row btn-bottom text-center" id="logout-modal">
+            <a class="btn btn-3d0" href="javascript:void(0);" onclick="confirm();">确定</a>
+            <a class="btn btn-3d0" href="goBack">取消</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-center hide" id="indicate">
+    <a class="btn btn-block btn-3b0"></a>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/margin-db-tr.js"></script>
+</body>
+</html>

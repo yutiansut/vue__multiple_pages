@@ -1,0 +1,74 @@
+{
+    "hedgingArbitrage": [{
+            "name": "交割服务",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/jiaoGeFuWu.png"
+        },
+        {
+            "name": "交割服务",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/jiaoGeFuWu.png"
+        },
+        {
+            "name": "交割服务",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/jiaoGeFuWu.png"
+        },
+        {
+            "name": "交割服务",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/jiaoGeFuWu.png"
+        }
+    ],
+    "noviceMarket": {
+        "advertising": {
+            "name": "广告图",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/head_xinShouZhuanQu.png"
+        },
+        "functional": [{
+            "name": "软件介绍",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/fun_ruanJianJieShao.png"
+        }, {
+            "name": "合约介绍",
+            "url": "javascript:;",
+            "img": "../zxjtInfo/images/fun_heYueJieShao.png"
+        }, {
+            "name": "投资预算",
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/incomeComputed",
+            "img": "../zxjtInfo/images/fun_touZiYuSuan.png"
+        }, {
+            "name": "开户指引",
+            "url": "pobo:uncheck=1&pageId=900004&title=开户指引&url=http://a.xiumi.us/board/v5/25jN3/7811535",
+            "img": "../zxjtInfo/images/fun_kaiHuZhiYing.png"
+        }],
+        "hotArea": [{
+                "name": "我要开户",
+                "url": "pobo:uncheck=1&goback=1&pageId=800006",
+                "img": "../zxjtInfo/images/woYaoKaiHu.png"
+            },
+            {
+                "name": "模拟交易",
+                "url": "#",
+                "img": "../zxjtInfo/images/moJiaoYi.png"
+            }
+        ],
+        "game": {
+            "name": "模拟游戏",
+            "url": "#",
+            "img": "../zxjtInfo/images/moYouXi.png"
+        },
+        "essential": [{
+                "name": "期海无涯",
+                "url": "pobo:uncheck=1&pageId=900005&url=consult/index.html#/college",
+                "img": "../zxjtInfo/images/qiHaiWuYa.png"
+            },
+            {
+                "name": "精彩活动",
+                "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/meeting",
+                "img": "../zxjtInfo/images/jingCaiHuoDong.png"
+            }
+        ]
+    }
+}

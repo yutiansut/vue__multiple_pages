@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>贵金属交易</title>
+
+  <!-- Bootstrap -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="../css/embed.css" rel="stylesheet">
+  <style>
+    .btn-login .btn-3b0 {background-color: #3366cc; color: #fff;}
+    #trade-link .btn-group .btn {width: 25%;}
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="row" id="account">
+        <p class="b2 lh24">（贵金属<span id="accName">账户</span> <span id="accnum">***********</span> <span id="name">**</span>）</p>
+      </div>
+      <div id="fund">
+        <div class="row totalasset">
+          <img class="pull-left" src="../images/totalasset.png" alt="总资产" />
+          <p class="b1">总资产</p>
+          <p class="a8" id="total-asset">--元</p>
+        </div>
+      </div>
+      <!--<div class="row">
+        <p class="pl">浮动盈亏<span class="a1" id="total-PL">--</span></p>
+      </div>-->
+      <div class="position-row1">
+          <div class="col-xs-4 fund-left">
+            <div class="text-left fund-top">
+              <p class="c2">浮动盈亏</p>
+              <p class="c1" id="kaicang">--元</p>
+            </div>
+            <div class="text-left">
+              <p class="c2">冻结资金</p>
+              <p class="c1" id="frozen">--元</p>
+            </div>
+          </div>
+          <div class="col-xs-4 fund-right">
+            <div class="text-left fund-top">
+              <p class="c2">可用资金</p>
+              <p class="c1" id="available">--元</p>
+            </div>
+            <div>
+              <p class="c2">手续费</p>
+              <p class="c1" id="commission">--元</p>
+            </div>
+          </div>
+          <div class="col-xs-4 fund-left">
+            <div class="text-left fund-top">
+              <p class="c2">持仓保证金</p>
+              <p class="c1" id="chicang">--元</p>
+            </div>
+          </div>
+        </div>
+      <div class="row" id="trade-link">
+        <div class="btn-group clearfix" style="border-bottom: 1px solid #e4e7f0;">
+          <a class="btn btn-default" id="btn-14" href="pobo:uncheck=1&pageId=802601"><p class="b1">下单</p></a>
+          <a class="btn btn-default" id="btn-11" href="pobo:uncheck=1&pageId=902602"><p class="b1">委托</p></a>
+          <a class="btn btn-default" id="btn-15" href="pobo:uncheck=1&pageId=902603"><p class="b1">成交</p></a>
+          <a class="btn btn-default" id="btn-12" href="pobo:uncheck=1&pageId=902604"><p class="b1">持仓</p></a>
+          <!--<a class="btn btn-default" id="btn-16" href="pobo:pageId=902304"><p>条件单</p></a>-->
+        </div>
+      </div>
+      <div class="row" id="stacked-link">
+        <ul class="nav nav-pills nav-stacked">
+        </ul>
+      </div>
+      <div class="row btn-login">
+        <div class="col-center">
+          <a class="btn btn-block btn-3b0" onclick="confirm();">退出登录</a>
+        </div>
+      </div>
+      <div class="my-modal hide">
+        <div class="my-modal-backdrop"></div>
+        <div class="my-modal-dialog">
+          <p class="title">提&nbsp;&nbsp;示</p>
+          <div class="row text-center">
+            <p>确定退出当前账号？</p>
+          </div>
+          <div class="row btn-bottom" id="logout-modal">
+            <a class="btn btn-3d0" href="pobo:pageId=802002" onclick="logout();">确定退出</a>
+            <input class="btn btn-6d1" type="button" value="取消" onclick="cancel();"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/PB.Api.js"></script>
+  <script src="../../js/PB.Page.js"></script>
+  <script src="../../js/PB.Utils.js"></script>
+  <script src="../../js/jquery-2.2.0.min.js"></script>
+  <script src="js/gold.js"></script>
+</body>
+</html>

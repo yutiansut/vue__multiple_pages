@@ -1,0 +1,86 @@
+{
+  "index":{
+    "stacked":[
+      {
+        "name":"库存查询",
+        "url":"pobo:uncheck=1&pageId=902606&url=gold/view/gold-strg.html"
+      },
+      {
+        "name":"提货申请",
+        "url":"pobo:uncheck=1&pageId=902607&url=gold/view/gold-th-app.html"
+      },
+      {
+        "name":"提货查询",
+        "url":"pobo:uncheck=1&pageId=902608&url=gold/view/gold-th.html"
+      },
+      {
+        "name":"历史成交",
+        "url":"pobo:uncheck=1&pageId=902609&url=gold/view/gold-dl-his.html"
+      },
+      {
+        "name":"交割申报",
+        "url":"pobo:uncheck=1&pageId=902610&url=gold/view/gold-jgsb.html"
+      },
+      {
+        "name":"银贵转账",
+        "url":"pobo:uncheck=1&pageId=902611&url=gold/view/gold-tr.html"
+      },
+      {
+        "name":"修改密码",
+        "url":"pobo:uncheck=1&pageId=802004"
+      }
+    ]
+  },
+  "storage": {
+    "title": "库存查询",
+    "functionNO": 9301,
+    "item": [{ "name": "合约名称", "id": "number", "num": "365" }, 
+             { "name": "库存总量", "id": "app", "num": "366" }, 
+             { "name": "可用库存", "id": "start", "num": "367" }]
+  },
+  "strg-detail": {
+    "title": "库存信息",
+    "functionNO": "",
+    "item": [{"name": "品种代码", "id": "number", "num": "364"}, 
+             {"name": "品种名称", "id":"app", "num": "365"}, 
+             {"name": "库存总量", "id": "start", "num": "366"}, 
+             {"name": "可用库存", "id": "end", "num": "367"}, 
+             {"name": "待提库存", "id": "bank", "num": "368"}, 
+             {"name": "今买入量", "id": "status", "num": "369"}, 
+             {"name": "今卖出量", "id": "city", "num": "370"}, 
+             {"name": "今存入", "id": "code", "num": "371"}, 
+             {"name": "今提出", "id": "name", "num": "372"}, 
+             {"name": "今借入", "id": "weight", "num": "373"}, 
+             {"name": "今借出", "id": "people", "num": "374"}, 
+             {"name": "出库量", "id": "id", "num": "375"}, 
+             {"name": "现货冻结库存", "id": "idNum", "num": "376"}, 
+             {"name": "质押库存", "id": "storage", "num": "377"}, 
+             {"name": "质押冻结库存", "id": "contact", "num": "378"}, 
+             {"name": "法律冻结库存", "id": "phone", "num": "379"}, 
+             {"name": "银行冻结库存", "id": "mode", "num": "380"}, 
+             {"name": "库存均价", "id": "channel", "num": "381"}, 
+             {"name": "交易日期", "id": "channel", "num": "248"}]
+  },
+  "th": {
+    "title": "提货查询",
+    "functionNO": 9308,
+    "item": [{ "name": "品种名称", "id": "number", "num": "365" }, 
+             { "name": "开始/结束日期", "id": "app", "num": "171,201" }, 
+             { "name": "提货重量/状态", "id": "start", "num": "405,412" }]
+  },
+  "th-info": {
+    "title": "提货单信息",
+    "functionNO": 9308,
+    "item": [{ "name": "提货单号", "id": "number", "num": "410" }, { "name": "申请日期", "id": "app", "num": "227" }, { "name": "起始日期", "id": "start", "num": "171" }, { "name": "结束日期", "id": "end", "num": "201" }, { "name": "银行提货日", "id": "bank", "num": "411" }, { "name": "提货状态", "id": "status", "num": "412" }, { "name": "城市名称", "id": "city", "num": "400" }, { "name": "品种代码", "id": "code", "num": "364" }, { "name": "品种名称", "id": "name", "num": "365" }, { "name": "提货重量", "id": "weight", "num": "405" }, { "name": "提货人", "id": "people", "num": "413" }, { "name": "证件类型", "id": "id", "num": "407" }, { "name": "证件号码", "id": "idNum", "num": "310" }, { "name": "仓库名称", "id": "storage", "num": "402" }, { "name": "联系人", "id": "contact", "num": "404" }, { "name": "联系电话", "id": "phone", "num": "414" }, { "name": "提货模式", "id": "mode", "num": "409" }, { "name": "交易渠道", "id": "channel", "num": "415" }]
+  },
+  "yy-dt": {
+    "title": "预约转账信息",
+    "functionNO": "",
+    "item": [{"name": "申请日期", "id": "number", "num": "227"}, 
+             {"name": "申请时间", "id":"app", "num": "228"}, 
+             {"name": "预约出金日期", "id": "start", "num": "707"}, 
+             {"name": "预约出金金额", "id": "end", "num": "708"}, 
+             {"name": "申请状态", "id": "bank", "num": "545"}, 
+             {"name": "备注信息", "id": "status", "num": "163"}]
+  }
+}

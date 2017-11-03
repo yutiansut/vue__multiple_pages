@@ -1,0 +1,25 @@
+.with-status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: rgba(235,18,18,0);
+  z-index: 1030;
+}
+.with-status-bar.andriod-status-bar {
+  height: 66px;
+}
+.with-status-bar * {
+  background-color: transparent;
+}
+.with-status-bar .status-bar-bgc {
+  width: 100%;
+  height: 20px;
+}
+.with-status-bar.andriod-status-bar .status-bar-bgc {
+  height: 22px;
+}
+.with-status-bar .navbar-bgc {
+  width: 100%;
+}

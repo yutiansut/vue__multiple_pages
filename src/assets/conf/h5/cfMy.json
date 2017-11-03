@@ -1,0 +1,59 @@
+{
+    "my": {
+        "functional": [{
+                "url": "#",
+                "icon": "../my/images/icon-jianTouBiDiuHuan.png",
+                "name": "建投币兑换"
+            },
+            {
+                "url": "#",
+                "icon": "../my/images/icon-liCaiZiXuan.png",
+                "name": "理财自选"
+            },
+            {
+                "url": "#",
+                "icon": "../my/images/icon-zhangTing.png",
+                "name": "掌上营业厅"
+            }
+        ],
+        "group": [{
+                "url": "pobo:uncheck=1&goback=1&pageId=800006",
+                "icon": "../my/images/icon-kaiHu.png",
+                "name": "我要开户"
+            },
+            {
+                "url": "javascript:;",
+                "icon": "../my/images/icon-huoDong.png",
+                "name": "我的活动"
+            },
+            {
+                "url": "pobo:uncheck=1&goback=0&pageId=900005&url=my/index.html?#/userinfo",
+                "icon": "../my/images/icon-ziLiao.png",
+                "name": "我的资料"
+            },
+            {
+                "url": "pobo:uncheck=1&goback=0&pageId=900005&url=my/index.html?#/risk",
+                "icon": "../my/images/icon-fengXianCePing.png",
+                "name": "风险测评"
+            },
+            {
+                "url": "pobo:uncheck=1&goback=0&pageId=900005&url=my/index.html?#/invitation",
+                "icon": "../my/images/icon-haoYouYaoQing.png",
+                "name": "好友邀请",
+                "interval": true
+            },
+            {},
+            {
+                "url": "pobo:goback=1&uncheck=1&pageId=900005&url=consult/index.html#/companyIntroduce",
+                "icon": "../my/images/icon-zouJing.png",
+                "name": "走进中信建投"
+            },
+            {
+                "url": "pobo:pageId=900004&title=设置&url=my/index.html#/set",
+                "icon": "../my/images/icon-sheZhi.png",
+                "name": "设置",
+                "interval": true
+            }
+        ]
+    }
+}

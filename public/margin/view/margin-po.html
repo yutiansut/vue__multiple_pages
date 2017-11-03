@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>持仓</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <style>
+    body {padding-top: 0;}
+    .funds-detail {margin-top: 0; padding-top: 10px;}
+    .funds-detail {position: fixed; top: 0; width: 100%; z-index: 100; background-color: #f7f7fa; height: 66px;}
+    #contents {padding-top: 66px; z-index: 10;}
+    .col-my-1 {width: 35%;} .col-my-2 {width: 65%;} .col-my-3 {width: 50%;} .col-my-4 {width: 47%;} .col-my-5 {width: 6%;}
+    .lh30 {line-height: 30px;}
+    .position-row {margin-left: -8px; margin-right: -8px;}
+    .content {padding-left: 8px;}
+    .imageBar {padding-top: 8px;}
+    .imageBar img {height: 130px;}
+    .style1 {height: 60px; padding-top:20px;} .style2 {margin-left: -8px; border-top: 1px solid #e4e5f0; height: 30px; border-bottom: none;} .style3 {padding-left:10%;} .style4 {padding-right: 10%;}
+    div[id^="hideB"] {padding: 0 0; border-bottom: none;}
+    div[id^="hideBox"]>div {margin-bottom: 0;}
+    div[id^="hideBox"] {height: 30px; background-color: #fff;}
+    .d1, .d3, .d4 {font-size: 14px;}
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div id="fund">
+        <div class="row funds-detail">
+          <div>
+            <p class="b2">总市值</p>
+            <p class="c1" id="mkt">--元</p>
+          </div>
+          <div>
+            <p class="b2">总盈亏</p>
+            <p class="c1" id="float">--元</p>
+          </div>
+        </div>
+      </div>
+      <div id="contents">
+      </div>
+      <div id="alert" class="text-center a1 hide" style="margin-top: 10px;">--无数据记录--</div>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>    
+  <script src="../../../js/react.min.js"></script>
+  <script src="../../../js/react-dom.min.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/margin-plugins.js"></script>
+  <script src="../js/margin-po.js"></script>
+</body>
+</html>

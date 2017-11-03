@@ -1,0 +1,28 @@
+{
+  "serverUrl": "http://101.226.207.143:58080/Hall",
+  "serverUrl2": "http://pbnetserver.pobo.net.cn/signature-1.2",
+  "queueServerHost": "pbnetserver.pobo.net.cn:9080/adequacy-queue-1.0",
+  "basicInfo": {
+    "POSTCODE_MUST": false,
+    "FAX_NO_MUST": false,
+    "EMAIL_MUST": false,
+    "BENEFICIARY_MUST": false,
+    "NO_CREDIT_TYP_MUST": true
+  },
+  "view": {
+    "success": {
+      "text": [
+        "恭喜您",
+        "已完成适当性评估的所有流程",
+        "最终审核结果我们会电话通知您"
+      ]
+    },
+    "failure": {
+      "text": [
+        "很遗憾",
+        "您的适当性审核未通过"
+      ]
+    },
+    "workingTime": "工作时间：交易日 9:00 - 17:00"
+  }
+}

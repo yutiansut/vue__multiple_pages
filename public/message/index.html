@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/configStyle.css" rel="stylesheet">
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="css/message.css" rel="stylesheet">
+  <script src="../js/adaptation.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="goBack" class="navbar-brand"></a>
+        </div>
+        <p class="navbar-text">我的消息</p>
+        <a class="setting" href="pobo:pageId=900005&backInfo=1&url=message/view/setting.html">设置</a>
+      </div>
+  </nav>
+  <div class="indexView fs10" id="app">
+      <a href="view/list.html?1"><img src="images/sys.png"/><i></i>系统消息<span class="ellipsis"></span></a>
+      <a href="view/list.html?2"><img src="images/notice.png"/><i></i>公司公告<span class="ellipsis"></span></a>
+      <a href="view/list.html?3"><img src="images/news.png"/><i></i>新闻资讯<span class="ellipsis"></span></a>
+  </div>
+  <script src="../../js/PB.Api.js"></script>
+  <script src="../../js/jquery-2.2.0.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/message.js"></script>
+</body>
+</html>

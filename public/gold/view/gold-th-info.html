@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>提货单信息</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .btn-3b0, .btn-3d0 {background-color: #3366cc;}
+    input {width: 60%; border-radius: 3px; height: 30px;}
+    #logout-modal {margin-top: 10px;}
+    #logout-modal>.btn-3d0 {width: 40%;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav-header">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand">
+          <img src="../../images/goback.png" alt="返回" />
+        </a>
+      </div>
+      <p class="navbar-text">提货单信息</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix a1 lh39">
+      <div class="nav-blank1 row"></div>
+      <div id="content"></div>
+      <div class="row btn-login">
+        <div class="col-center">
+          <a class="btn btn-block btn-3b0" onclick="withdraw();">撤销申请</a>
+        </div>
+      </div>
+      <div class="my-modal hide">
+        <div class="my-modal-backdrop"></div>
+        <div class="my-modal-dialog">
+          <p class="title">输入提货密码</p>
+          <div class="text-center"><input type="password" placeholder="请输入提货密码" id="pwd"></div>
+          <div class="row btn-bottom" id="logout-modal">
+            <a class="btn btn-3d0" href="pobo:pageId=802002" onclick="confirm();">确定</a>
+            <a class="btn btn-3d0" href="pobo:pageId=802002" onclick="cancel();">取消</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/gold-th-info.js"></script>
+</body>
+</html>

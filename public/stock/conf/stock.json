@@ -1,0 +1,26 @@
+{
+  "index":{
+    "stacked":[
+      {
+        "name":"新股申购",
+        "url":"pobo:uncheck=1&pageId=802150"
+      },
+      {
+        "name":"历史委托",
+        "url":"pobo:uncheck=1&pageId=902105&url=stock/view/stock-en-his.html"
+      },
+      {
+        "name":"历史成交",
+        "url":"pobo:uncheck=1&pageId=902105&url=stock/view/stock-dl-his.html"
+      },
+      {
+        "name":"银证转账",
+        "url":"pobo:uncheck=1&pageId=902107&url=stock/view/stock-tr.html"
+      },
+      {
+        "name":"修改密码",
+        "url":"pobo:uncheck=1&pageId=802004"
+      }
+    ]
+  }
+}

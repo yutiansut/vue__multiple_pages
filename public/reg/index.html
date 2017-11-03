@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>登录</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/reg.css">
+  <link rel="stylesheet" href="../css/configStyle.css">
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-reg navbar-border-bottom">
+    <div class="navbar-index">
+      <a class="navbar-brand"  onclick="goBack()" id="btnBack">
+        <img src="images/goback.png" alt="返回">
+      </a>
+      <p class="text">登录</p>
+      <a class="navbar-link right" href="view/reg-regi.html">注册</a>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="tips-top">
+        <p class="error hide"></p>
+      </div>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label>账号</label>
+          <input class="form-control" type="tel" id="phone" placeholder="请输入您的手机号">
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <div class="input-group">
+            <input class="form-control" type="password" autocomplete="off" id="password" placeholder="请输入您的登录密码" onkeydown="jump('confirm');">
+            <span class="input-group-btn">
+              <img class="closeimg" id="openclose" src="images/close.png">
+            </span>
+          </div>
+        </div>
+        <input class="btn btn-block btn-cfm" type="button" value="登录" onclick="login();" id="confirm">
+      </div>
+      <div class="link-group clearfix">
+        <a class="forgot pull-left" href="view/reg-pwd.html">忘记密码？</a>
+        <a class="visitor pull-right" id="visitor" style="display:none" href="javascript:void(0);">游客进入</a>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../js/PB.Api.js"></script>
+<script src="../../js/jquery-2.2.0.min.js"></script>
+<script src="js/reg.js"></script>
+<script>
+  $(function () {
+    var visitor = GetQueryString("visitor");
+    if(visitor == "1") {
+      $('#visitor').show();
+      $('#btnBack').hide();
+    } else {
+      $('#visitor').hide();
+      $('#btnBack').show();
+    }
+
+    $('#openclose').click(function () {
+      if ($(this).hasClass('closeimg')) {
+        $(this).attr('src', 'images/open.png').removeClass('closeimg').addClass('openimg');
+        $('#password').attr('type', 'text');
+      } else {
+        $(this).attr('src', 'images/close.png').removeClass('openimg').addClass('closeimg');
+        $('#password').attr('type', 'password');
+      }
+    });
+
+    $("#visitor").click(function(){
+      pbE.SYS().sendMessageToNative('PbKey_H5_Home_Visitor_Login', "1");
+    });
+  });
+</script>
+</html>
+

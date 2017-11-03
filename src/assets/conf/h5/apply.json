@@ -1,0 +1,62 @@
+{
+  "performanceClassification": [
+    {
+      "name": "营业部",
+      "data": [
+        {
+          "name": "营业部资金情况",
+          "img": "icon_yingYeBuZiJin.png",
+          "flag": 1,
+          "type": 1
+        },
+        {
+          "name": "营业部客户数量",
+          "img": "icon_yingYeBuKeHu.png",
+          "flag": 2,
+          "type": 1
+        },
+        {
+          "name": "营业部客户成交持仓",
+          "img": "icon_yingYeBuKeHuCengJiaoChiCang.png",
+          "flag": 3,
+          "type": 1
+        },
+        {
+          "name": "营业部交易手续费",
+          "img": "icon_yingYeBuShouXuFei.png",
+          "flag": 4,
+          "type": 1
+        }
+      ]
+    },
+    {
+      "name": "客户经理",
+      "data": [
+        {
+          "name": "客户资金情况",
+          "img": "icon_keHuZiJing.png",
+          "flag": 5,
+          "type": 2
+        },
+        {
+          "name": "客户数量",
+          "img": "icon_keHuShuLiang.png",
+          "flag": 6,
+          "type": 2
+        },
+        {
+          "name": "客户成交持仓",
+          "img": "icon_keHuChengJiaoChiCang.png",
+          "flag": 7,
+          "type": 2
+        },
+        {
+          "name": "客户交易手续费",
+          "img": "icon_keHuShouXuFei.png",
+          "flag": 8,
+          "type": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>资金现状</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .text {float: none; margin-top: 0; margin-bottom: 0; color: #fff; text-align: center;}
+    .col-center {margin-top: 40px; margin-bottom: 40px;}
+    .btn-3b0 {background-color: #3366cc;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand" id="goBack">
+          <img src="../../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="text a0 lh27">资金现状</p>
+      <p class="text c0 lh17">（资金账号：<span id="accNum">---------</span>)</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix a1 lh39">
+      <div class="nav-blank1 row"></div>
+      <div class="row status-row">日期<span class="pull-right" id="date"></span></div>
+      <div class="row status-row">币种<span class="pull-right" id="currency"></span></div>
+      <div class="row status-row">当前权益<span class="pull-right" id="rightNow"></span></div>
+      <div class="row status-row">上日权益<span class="pull-right" id="rightLast"></span></div>
+      <div class="row status-row">可用资金<span class="pull-right" id="available"></span></div>
+      <div class="nav-blank1 row"></div>
+      <div class="row status-row">风险度<span class="pull-right" id="risk"></span></div>
+      <div class="row status-row">持仓盯市盈亏<span class="pull-right lh39" id="ccpl"></span></div>
+      <div class="row status-row">平仓盯市盈亏<span class="pull-right lh39" id="pcpl"></span></div>
+      <div class="nav-blank1 row"></div> 
+      <div class="row status-row">冻结资金<span class="pull-right" id="frozen"></span></div>
+      <div class="row status-row">已用保证金<span class="pull-right" id="take"></span></div>
+      <div class="row status-row">手续费<span class="pull-right" id="charge"></span></div>
+      <!--<div class="row status-row">占用手续费<span class="pull-right" id="takeCharge"></span></div>-->
+      <div class="row status-row">出入金<span class="pull-right" id="inOut"></span></div>   
+    </div>
+    
+    <div class="row">
+      <div class="col-center">
+        <a class="btn btn-block btn-3b0" href="spot-tr.html">出入金</a>
+      </div>
+    </div> 
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/spot-st.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title></title>
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <link href="../css/message.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+</head>
+<body>
+    <div id="app" class="listView" :class="{edit:edit, none:!data.length, none2:!data.length&&loading}">
+      <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="goBack" class="navbar-brand"></a>
+        </div>
+        <p class="navbar-text">{{title}}</p>
+        <a class="setting" @click="changeEdit">{{edit?"取消":"编辑"}}</a>
+      </div>
+      </nav>
+      <div class="unread fc17 fs23">还有<span>{{unread}}</span>条未读消息<a @click="updateUnread(data)">全部已读</a></div>
+      <div class="list">
+          <a v-for="d in data" :class="{read:d.readed==1, checked:d.checked}" @click="read(d, $event)" :href="'pobo:pageId=900005&url=message/view/detail.html?'+d.msgid+'&'+type">
+              <span class="c">{{d.cont}}</span>
+              <span class="fs11">{{d.time|msgTime}}</span>    
+          </a>    
+      </div>
+      <div class="btns">
+         <a class="all" @click="checkAll"><span :class="{checked:checked}">全选</span></a>
+         <a class="del" :class="{blue:count}" @click="del">删除({{count}})</a>
+      </div>
+      <div class="empty">暂无消息</div>
+      <div id="loading" v-show="loading"><span>正在加载...</span></div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/vue.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/list.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.base-color {
+    background-color: #36c !important
+}
+
+#unbind, .logout {
+    background: #36c
+}
+
+.bgc-fe0000, .btn-3b0, .btn-cfm, .btn-reg, .btn-reg + .btn-cfm, .btn-rtn, .modal-footer .btn-cfm, .navbar-fixed-top {
+    background-color: #36c
+}
+
+.btn-send {
+    border: 1px solid #36c;
+    color: #36c
+}

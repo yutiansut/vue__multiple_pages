@@ -1,0 +1,257 @@
+{
+  "index":{
+    "stacked":[
+      {
+        "name":"综合查询",
+        "url":"pobo:uncheck=1&pageId=902511&url=margin/view/margin-zh.html"
+      },
+      {
+        "name":"银证转账",
+        "url":"pobo:uncheck=1&pageId=902107&url=margin/view/margin-tr.html"
+      },
+      {
+        "name":"新股申购",
+        "url":"pobo:uncheck=1&pageId=802150"
+      },
+      {
+        "name":"修改密码",
+        "url":"pobo:uncheck=1&pageId=802004"
+      }
+    ]
+  },
+  "db":{
+    "barName": "查询担保证券",
+    "search": {"flag": "1", "placeholder": "请输入您要查询的担保证券", "item": "证券名称", "code": "513"},
+    "title": [{"name":"市场名称","code":"55"},
+              {"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"担保品折算比例","code":"588"},
+              {"name":"担保品浮动比例","code":"587"},
+              {"name":"担保状态","code":"586"},
+              {"name":"融资比例","code":"642"},
+              {"name":"融券比例","code":"643"}
+             ],
+    "functionNO":7000
+  },
+  "bd": {
+    "barName": "查询标的证券",
+    "search": {"flag": "1", "placeholder": "请输入您要查询的标的证券", "item1": "#title3", "item2":"#title4"},
+    "title": [{"name":"市场名称","code":"55"},
+              {"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"融资允许标志","code":"637"},
+              {"name":"融券允许标志","code":"639"},
+              {"name":"折算系数","code":"640"},
+              {"name":"折算比例","code":"588"},
+              {"name":"融资比例","code":"642"},
+              {"name":"融券比例","code":"643"},
+              {"name":"公司折算率","code":"644"}],
+    "functionNO": 7001
+  },
+  "credit-debt": {
+    "barName": "查询信用负债汇总",
+    "search": {"flag": "0", "placeholder": ""},
+    "title": [{"name": "市场名称","code": "55"},
+              {"name": "证券代码","code": "512"},
+              {"name": "证券名称","code": "513"},
+              {"name": "委托日期","code": "160"},
+              {"name": "委托号", "code": "65"},
+              {"name": "委托价格","code": "129"},
+              {"name": "委托数量","code": "130"},
+              {"name": "归还截止日期","code": "610"},
+              {"name": "偿还日期","code": "863"},
+              {"name": "合约数量","code": "864"},
+              {"name": "合约金额","code": "865"},
+              {"name": "未还数量","code": "867"},
+              {"name": "未还金额","code": "868"},
+              {"name": "未归还息费","code": "869"},
+              {"name": "合约状态","code": "870"},
+              {"name": "合约类型","code": "871"},
+              {"name": "头寸编号", "code": "872"},
+              {"name": "到期日期","code": "874"},
+              {"name": "合同编号","code": "873"}],
+    "functionNO": 7109
+  },
+  "rz": {
+    "barName": "融资明细",
+    "search": {"flag": "0", "placeholder": ""},
+    "title": [{"name":"交易市场","code":"55"},
+              {"name":"币种","code":"57"},
+              {"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"买卖类别","code":"270"},
+              {"name":"发生日期","code":"202"},
+              {"name":"融资数量","code":"589"},
+              {"name":"融资金额","code":"590"},
+              {"name":"融券数量","code":"591"},
+              {"name":"融券金额","code":"592"},
+              {"name":"负债金额","code":"601"},
+              {"name":"负债数量","code":"602"},
+              {"name":"负债状态","code":"609"},
+              {"name":"负债利息","code":"603"},
+              {"name":"负债利率","code":"604"},
+              {"name":"已经还款本金","code":"605"},
+              {"name":"已经还款利息","code":"606"},
+              {"name":"已经还券数量","code":"607"},
+              {"name":"归还截止日期","code":"610"},
+              {"name":"最近还款还券日期","code":"611"},
+              {"name":"直接还款金额","code":"612"},
+              {"name":"流水号","code":"383"},
+              {"name":"股东账号","code":"52"}],
+    "functionNO":7005
+  },
+  "rq": {
+    "barName": "融券明细",
+    "search": {"flag": "0", "placeholder": ""},
+    "title": [{"name":"交易市场","code":"55"},
+              {"name":"币种","code":"57"},
+              {"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"买卖类别","code":"270"},
+              {"name":"发生日期","code":"202"},
+              {"name":"融资数量","code":"589"},
+              {"name":"融资金额","code":"590"},
+              {"name":"融券数量","code":"591"},
+              {"name":"融券金额","code":"592"},
+              {"name":"负债金额","code":"601"},
+              {"name":"负债数量","code":"602"},
+              {"name":"负债状态","code":"609"},
+              {"name":"负债利息","code":"603"},
+              {"name":"负债利率","code":"604"},
+              {"name":"已经还款本金","code":"605"},
+              {"name":"已经还款利息","code":"606"},
+              {"name":"已经还券数量","code":"607"},
+              {"name":"归还截止日期","code":"610"},
+              {"name":"最近还款还券日期","code":"611"},
+              {"name":"直接还款金额","code":"612"},
+              {"name":"流水号","code":"383"},
+              {"name":"委托价格","code":"129"},
+              {"name":"业务类型","code":"422"},
+              {"name":"股东账号","code":"52"}],
+    "functionNO": 7006
+  },
+  "debt-recd": {
+    "barName": "负债流水",
+    "search": {"flag": "0", "placeholder": "", "item1": "", "item2":""},
+    "title": [{"name":"交易市场","code":"55"},
+              {"name":"流水号","code":"383"},
+              {"name":"买卖类别","code":"270"},
+              {"name":"客户姓名","code":"74"},
+              {"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"发生日期","code":"202"},
+              {"name":"发生时间","code":"203"},
+              {"name":"发生数量","code":"508"},
+              {"name":"发生金额","code":"382"},
+              {"name":"清算标志","code":"613"},
+              {"name":"备注","code":"163"},
+              {"name":"股东账号","code":"52"}],
+    "functionNO": 7007,
+    "history": "1"
+  },
+  "kzdb": {
+    "barName": "可转入担保证券查询",
+    "search": {"flag": "0", "placeholder": "", "item": "", "code": ""},
+    "title": [{"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"交易市场","code":"55"},
+              {"name":"币种","code":"57"},
+              {"name":"盈亏金额","code":"614"},
+              {"name":"当前数量","code":"135"},
+              {"name":"可用数量","code":"137"},
+              {"name":"保本价","code":"140"},
+              {"name":"最新价","code":"138"},
+              {"name":"证券市值","code":"142"},
+              {"name":"浮动盈亏","code":"141"},
+              {"name":"累计盈亏","code":"143"},
+              {"name":"成本价","code":"139"},
+              {"name":"昨持仓量","code":"2002"},
+              {"name":"买入均价","code":"136"},
+              {"name":"买入金额","code":"148"},
+              {"name":"卖出金额","code":"149"},
+              {"name":"冻结数量","code":"145"},
+              {"name":"未交收数量","code":"146"},
+              {"name":"利息报价","code":"150"},
+              {"name":"非流通数量","code":"151"},
+              {"name":"非流通市值","code":"615"},
+              {"name":"开仓日期","code":"147"},
+              {"name":"股东账号","code":"52"}],
+    "functionNO":7009
+  },
+  "kr": {
+    "barName": "查询可融证券",
+    "search": {"flag": "1", "placeholder": "请输入您要查询的可融证券", "item": "证券名称", "code": "513"},
+    "title": [{"name":"交易市场","code":"55"},
+              {"name":"证券代码","code":"512"},
+              {"name":"证券名称","code":"513"},
+              {"name":"可用数量","code":"137"}],
+    "functionNO": 7106
+  },
+
+  "customs": {
+    "contents": [
+      {
+        "title": "融资买入",
+        "image": "rongCbuy.png",
+        "url": "pobo:uncheck=1&pageId=802503"
+      },
+      {
+        "title": "普通买入",
+        "image": "regularBuy.png",
+        "url": "pobo:uncheck=1&pageId=802501"
+      },
+      {
+        "title": "融券卖出",
+        "image": "rongQsell.png",
+        "url": "pobo:uncheck=1&pageId=802505",
+        "id": "tishi"
+      },
+      {
+        "title": "普通卖出",
+        "image": "regularSell.png",
+        "url": "pobo:uncheck=1&pageId=802502",
+        "id": "xinwen"
+      },
+      {
+        "title": "卖券还款",
+        "image": "sellQreturnC.png",
+        "url": "pobo:uncheck=1&pageId=802506"
+      },
+      {
+        "title": "现金还款",
+        "image": "cashReturnC.png",
+        "url": "pobo:uncheck=1&pageId=902508&url=margin/view/margin-return.html"
+      },
+      {
+        "title": "买券还券",
+        "image": "buyQreturnQ.png",
+        "url": "pobo:uncheck=1&pageId=802504"
+      },
+      {
+        "title": "现券还券",
+        "image": "cashReturnQ.png",
+        "url": "pobo:uncheck=1&pageId=802507"
+      },
+      {
+        "title": "当日委托",
+        "image": "weituo.png",
+        "url": "pobo:uncheck=1&pageId=902509"
+      },
+      {
+        "title": "担保品划转",
+        "image": "danbaopin.png",
+        "url": "pobo:uncheck=1&pageId=902513&url=margin/view/margin-db-tr.html"
+      },
+      {
+        "title": "当日成交",
+        "image": "chengjiao.png",
+        "url": "pobo:uncheck=1&pageId=902512"
+      },
+      {
+        "title": "我的持仓",
+        "image": "chicang.png",
+        "url": "pobo:uncheck=1&pageId=902510"
+      }
+    ]
+  }
+}

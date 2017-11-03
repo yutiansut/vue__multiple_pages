@@ -1,0 +1,95 @@
+/*
+*主题
+*项目样式规范
+*/
+
+//常用样式
+
+//通用border的颜色
+$color-cutline-1px-cutoff: #e4e7f0;
+
+//主页通用背景颜色
+$color-bg-nav-text: #ffffff;
+
+//body区域颜色(背景底色)
+$color-bg-grounding: #ffffff;
+
+//主要字体颜色
+$color-bg-text: #1a1a1a;
+
+//导航条的颜色和选项卡的颜色
+$color-bg-up: red;//修改导航条的颜色
+
+//导航条文字的颜色
+$color-text-nav-text: #ffffff;
+
+
+
+
+/*
+*私有不常用的样式
+*/
+
+
+//额外自定义颜色
+$color-border-qnr: #f0f0f0;
+$color-slidebody-avatar: #1c89ea;
+$color-copper-page-avatar: #000000;
+$color-ind-bg: #f0eff5;
+$color-ddd-bg: #ddd;
+$color-2121-bg: #eb2121;
+$color-f9f9-bg: #f9f9f9;
+$color-ebeb-bg: #ebebeb;
+$color-1dd-bg: #1ddf18;
+$color-ff3-bg: #ff3227;
+$color-6c6-bg: #f06c6a;
+
+
+//主色调及辅助色
+
+$color-bg-detail1: #b6bbc2; //详情页跌幅界面配色、分时柱状图跌幅、数字跌幅以及按钮颜色
+
+$color-bg-assistant-text: #808086; //辅助陪衬、提示性文字
+
+
+
+
+
+//文字用色
+$color-text-select: #3366cc; //选中状态文字
+$color-text-report-up-number: #eb1212; //报价数据类，涨幅数字
+$color-text-nav-text: #ffffff; //导航栏标题、按钮点击及选中状态文字
+$color-text-text: #1a1a1a; //正文、标题文字
+$color-text-news-text: #4c4c55; //新闻字体用色
+
+//icon用色
+
+$color-icon-state: #b6bbc2; //状态栏显色颜色
+
+
+//背景分割线用色
+$color-cutline-upline: #c0c6cd; //table栏-上线
+
+//按钮颜色
+$color-btn-disabled: #dfdfdf; //按钮禁用状态
+
+//字体
+$font-size-13: 22px; //自选列表数据 22px
+$font-size-14: 20px; //导航栏栏目名称 20px
+$font-size-19: 18px; //期权详情页指数 18px
+$font-size-20: 16px; //自选列表数据 16px
+
+//自定义字体
+$font-size-12: 12px; //body字体
+$font-size-0: 0; //特殊用处
+$font-size-9: 14px;
+$font-size-8: 10px;
+$font-size-7: 15px;
+$font-size-6: 8px;
+$font-size-5: 13px;
+$font-size-4: 23px;
+$font-size-3: 17px;
+$font-size-2: 9px;
+$font-size-1: 11px;
+
+

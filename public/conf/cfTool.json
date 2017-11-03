@@ -1,0 +1,70 @@
+{
+    "query": [{
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/tradeCalendar",
+            "name": "交易日历",
+            "img": "../tool/images/jiaoYiRiLi.png"
+        },
+        {
+            "url": "pobo:uncheck=1&pageId=904001&url=https://webnewsdx1.pobo.net.cn/Data/CAIJING/FinancialCalendarNosge.html",
+            "name": "财经日历",
+            "img": "../tool/images/caiJingRiLi.png"
+        },
+        {
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/standardContract",
+            "name": "标准合约",
+            "img": "../tool/images/biaoZhunHeYue.png"
+        },
+        {
+            "url": "#",
+            "name": "资金存取",
+            "img": "../tool/images/ziJinCunQu.png"
+        },
+        {
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/mapList",
+            "name": "网点查询",
+            "img": "../tool/images/wangZhanChaXun.png"
+        },
+        {
+            "url": "#",
+            "name": "套保套利",
+            "img": "../tool/images/taoBaoTaoLi.png"
+        }
+    ],
+    "calculation": [{
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/marginComputed",
+            "name": "保证金计算",
+            "img": "../tool/images/baoZhengJin.png"
+        },
+        {
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/incomeComputed",
+            "name": "收益计算",
+            "img": "../tool/images/shouYiJiSuan.png"
+        },
+        {
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/nationalDebt",
+            "name": "国债收益",
+            "img": "../tool/images/guoZhaiShouYi.png"
+        }
+    ],
+    "analysis": [{
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=mrkHot/index.html",
+            "name": "市场热点",
+            "img": "../tool/images/shiChangDongXiang.png"
+        },
+        {
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/institution",
+            "name": "机构动向",
+            "img": "../tool/images/jiGouDongXiang.png"
+        },
+        {
+            "url": "#",
+            "name": "套利分析",
+            "img": "../tool/images/taoLiFenXi.png"
+        },
+        {
+            "url": "pobo:goback=0&uncheck=1&pageId=900005&url=consult/index.html#/inventory",
+            "name": "库存仓单",
+            "img": "../tool/images/kuCunCangDan.png"
+        }
+    ]
+}

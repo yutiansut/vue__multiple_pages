@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>预约转账</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .btn-3b0 {background-color: #3366cc; width: 40%;}
+    .button {font-size: 18px; color: #fff; background-color: #3366cc; height: 35px; margin-top: 20px; border-radius: 5px; line-height: 35px;}
+    .button:nth-child(1) {margin-left: 2.5%;}
+    .button:nth-child(2) {margin-left: 10%; margin-right: 2.5%;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand" id="goBack">
+          <img src="../../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="navbar-text">预约转账</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="row content divide">
+        <div class="col-xs-4 left-title">
+          预约金额
+        </div>
+        <div class="col-xs-8 right-input">
+          <input type="number" placeholder="请输入预约金额" id="amount">
+        </div>
+      </div>
+      <div class="row content">
+        <div class="col-xs-4 left-title">
+          资金密码
+        </div>
+        <div class="col-xs-8 right-input">
+          <input type="password" placeholder="请输入资金密码" id="pwd">
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-xs-5 text-center button" onclick="apply();">申请</div>
+        <div class="col-xs-5 text-center button" onclick="reset();">重置</div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/gold-yy-tr.js"></script>
+</body>
+</html>

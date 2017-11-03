@@ -1,0 +1,50 @@
+{
+  "customs": {
+    "isShow": true,
+    "isReplace": false,
+    "version": 0.05,
+    "updateDate": "2016-09-08",
+    "contents": [
+      {
+        "title": "开户",
+        "checked": "1",
+        "image1": "../main/images/common-func-1.png",
+        "image2": "../main/images/common-func-1.png",
+        "url": "pobo:uncheck=1&pageId=800006",
+        "id": "M1"
+      },
+      {
+        "title": "业务办理",
+        "checked": "1",
+        "image1": "../main/images/common-func-2.png",
+        "image2": "../main/images/common-func-2.png",
+        "url": "#",
+        "id": "M2"
+      },
+      {
+        "title": "场外报价",
+        "checked": "1",
+        "image1": "../main/images/common-func-3.png",
+        "image2": "../main/images/common-func-3.png",
+        "url": "#",
+        "id": "M3"
+      },
+      {
+        "title": "期货学院",
+        "checked": "1",
+        "image1": "../main/images/common-func-4.png",
+        "image2": "../main/images/common-func-4.png",
+        "url": "pobo:uncheck=1&pageId=900005&url=consult/index.html#/college",
+        "id": "M4"
+      },
+      {
+        "title": "热点话题",
+        "checked": "1",
+        "image1": "../main/images/common-func-5.png",
+        "image2": "../main/images/common-func-5.png",
+        "url": "#",
+        "id": "M5"
+      }
+    ]
+  }
+}

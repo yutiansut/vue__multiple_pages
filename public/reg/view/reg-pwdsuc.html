@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>成功</title>
+
+  <!-- Bootstrap -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/reg.css" rel="stylesheet">
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .success {
+      margin: 40px auto 20px;
+      width: 76px;
+      height: 76px;
+    }
+    .success img {
+      width: 100%;
+    }
+    .tips {
+      font-size: 15px;
+      color: #1a1a1a;
+      text-align: center;
+    }
+    .btn-cfm {
+      margin-top: 34px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-border-bottom navbar-reg">
+    <div class="">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="text">设置密码</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="success">
+        <img src="../images/success.png">
+      </div>
+      <p class="tips">恭喜您，密码设置成功啦！</p>
+      <a class="btn btn-block btn-cfm" id="target" href="">立即登录</a>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../js/reg.js"></script>
+  <script>
+    $('#target').attr('href', 'reg-one.html?phone=' + GetQueryString('phone'));
+  </script>
+</body>
+</html>

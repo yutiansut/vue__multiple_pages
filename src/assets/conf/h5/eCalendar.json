@@ -1,0 +1,21 @@
+{
+  "countrys":[
+    {"id":1,"name":"中国","checked":false},
+    {"id":2,"name":"美国","checked":false},
+    {"id":3,"name":"英国","checked":false},
+    {"id":4,"name":"法国","checked":false},
+    {"id":5,"name":"日本","checked":false},
+    {"id":6,"name":"德国","checked":false},
+    {"id":7,"name":"瑞士","checked":false},
+    {"id":8,"name":"欧元区","checked":false},
+    {"id":9,"name":"新西兰","checked":false},
+    {"id":10,"name":"意大利","checked":false},
+    {"id":11,"name":"加拿大","checked":false},
+    {"id":12,"name":"澳大利亚","checked":false}
+  ],
+  "grade":[
+    {"id":"1","name":"高","checked":false},
+    {"id":"2","name":"中","checked":false},
+    {"id":"3","name":"低","checked":false}
+  ]
+}

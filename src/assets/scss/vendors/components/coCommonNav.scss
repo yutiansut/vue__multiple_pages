@@ -1,0 +1,95 @@
+.pb-common-nav {
+  font-size: $font-size-3;
+  color: $color-bg-nav-text;
+  background-color: $color-bg-up;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar {
+  display: flex;
+  user-select: none;
+  padding: 0;
+}
+
+.navbar-body, .navbar-footer, .navbar-header {
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar-header {
+  min-width: 70px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+
+.navbar-body {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.navbar-footer {
+  min-width: 70px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right
+}
+
+.common-nav {
+  height: 44px;
+  line-height: 44px;
+}
+
+.common-nav .navbar-header {
+  padding-right: 0;
+}
+
+.common-nav .navbar-header a {
+  padding: 11px 30px 11px 15px;
+}
+
+.common-nav .navbar-header .back img {
+  height: 18px;
+}
+
+.common-nav .navbar-header .search img {
+  height: 17px;
+}
+
+.common-nav .navbar-body {
+  position: relative;
+  padding: 0;
+  font-size: 18px;
+}
+
+.common-nav .navbar-footer {
+  padding-left: 0;
+}
+
+.common-nav .navbar-footer a {
+  padding: 11px 15px 11px 20px;
+}
+
+.common-nav .navbar-footer .service img {
+  height: 18px;
+}
+
+.common-nav .navbar-footer .message img {
+  height: 14px;
+}
+
+.common-nav .navbar-footer .comShare img {
+  height: 18px;
+}

@@ -1,0 +1,18 @@
+{
+  "index":{
+    "stacked":[
+      {
+        "name":"资金现状",
+        "url":"pobo:uncheck=1&pageId=902706&url=spot/view/spot-st.html"
+      },
+      {
+        "name":"出入金",
+        "url":"pobo:uncheck=1&pageId=902707&url=spot/view/spot-tr.html"
+      },
+      {
+        "name":"修改密码",
+        "url":"pobo:uncheck=1&pageId=802004"
+      }
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>注册</title>
+
+  <!-- Bootstrap -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/reg.css" rel="stylesheet">
+  <style>
+    .confirm {border-radius: 50px;}
+    #goBack {border-radius: 50px;}
+    .input-group-btn:last-child>.btn {background-color: transparent;}
+    .form-control:focus {border: none; box-shadow: none;}
+    #btn-send { border-radius: 4px; padding: 3px 6px; width: 62px; font-size: 12px;}
+    #btn-send:focus {outline: 0;}
+    .btn-send{
+      border: 1px solid #3366cc;
+      color: #3366cc;
+    }
+    .modal-body{
+      height: 380px;
+      overflow: auto;
+    }
+  </style>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-border-bottom navbar-reg">
+    <div>
+      <div class="navbar-header">
+        <a class="navbar-brand" onclick="goBack()">
+          <img src="../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="text">注册</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="tips-top" onclick="fold();">
+        <p class="error hide"></p>
+        <span class="registered hide">该手机号已注册&nbsp;&nbsp;&nbsp;<a>设置登录密码</a></span>
+      </div>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <input type="tel" class="form-control" id="phone" placeholder="请输入您的手机号">
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control up" id="randomcode" placeholder="请输入图形验证码">
+            <span class="input-group-btn">
+              <img class="random-code" id="randomcodeImg" src="" onclick="getRandomCode()" alt="图形验证码">
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="tel" class="form-control up" id="code" placeholder="请输入手机校验码">
+            <span class="input-group-btn">
+              <input type="button" class="btn btn-send" id="btn-send" value="点击获取" onclick="sendRegOTP();">
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="password" class="form-control up" id="pwdInit" autocomplete="off" placeholder="请设置登录密码" onkeydown="jump('confirm');">
+            <span class="input-group-btn">
+              <img class="closeimg" id="openclose1" src="../images/close.png">
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="password" class="form-control up" id="confirm" autocomplete="off" placeholder="请再次输入密码" onkeydown="jump('sure');">
+            <span class="input-group-btn">
+              <img class="closeimg" id="openclose2" src="../images/close.png">
+            </span>
+          </div>
+        </div>
+        <input class="btn btn-block btn-cfm mt25" type="button" value="确定" onclick="register();" id="sure">
+        <div class="link-group ht">
+          <label>
+            <i class="icon_checkbox"></i>
+            <input type="checkbox" id="ht" onclick="agree(this);" />
+            我已阅读并同意
+          </label>
+          <a href="javascript:void(0);" onClick="modalShow()">《注册条款》</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="load-backdrop hide" id="backdrop">
+    <div class="loading"></div>
+  </div>
+  <!--注册条款遮罩层-->
+  <div class="modal dialog-info" id="noneTuchDialog" style="height: 568px;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center" id="myModalLabel">
+            注册声明
+          </h4>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-block center-block btn-cfm" onclick="modalHIde()">
+            确认
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
+  <script src="../js/reg.js"></script>
+  <script>
+    if(pbE.SYS()){
+      var loadSendOTPTime = pbE.SYS().getPrivateData('sendOTPTime');
+      ReadConfig(JSON.parse(pbE.SYS().readConfig('reg/conf/reg.json')));
+    }else{
+      var loadSendOTPTime = localStorage.getItem('sendOTPTime');
+      $.get('../conf/reg.json',ReadConfig);
+    }
+    function ReadConfig(con) {
+      $('.modal-body').html(con.disclaimer);
+    }
+    if (loadSendOTPTime) {
+      var loadTime = new Date().getTime();
+      var loadPeriod = loadTime - loadSendOTPTime;
+      if (loadPeriod < (60 * 1000)) {
+        var loadCountdown = 60 - Math.round(loadPeriod / 1000);
+        var iload = setInterval(function(){
+          if(loadCountdown == 0){
+            $('#btn-send').removeClass('disabled');
+            $('#btn-send').val('点击获取');
+            clearInterval(iload);
+            return;
+          } else{
+            $('#btn-send').val('(' + loadCountdown +  'S)');
+            $('#btn-send').addClass('disabled');
+          }
+          loadCountdown--;
+        },1000);
+      }
+    }
+    getRandomCode();
+    $('#openclose1').click(function () {
+      if ($(this).hasClass('closeimg')) {
+        $(this).attr('src', '../images/open.png').removeClass('closeimg').addClass('openimg');
+        $('#pwdInit').attr('type', 'text');
+      } else {
+        $(this).attr('src', '../images/close.png').removeClass('openimg').addClass('closeimg');
+        $('#pwdInit').attr('type', 'password');
+      }
+    });
+    $('#openclose2').click(function () {
+      if ($(this).hasClass('closeimg')) {
+        $(this).attr('src', '../images/open.png').removeClass('closeimg').addClass('openimg');
+        $('#confirm').attr('type', 'text');
+      } else {
+        $(this).attr('src', '../images/close.png').removeClass('openimg').addClass('closeimg');
+        $('#confirm').attr('type', 'password');
+      }
+    });
+    function agree(obj) {
+      if (obj.checked) {
+				$(obj).parent().addClass("selected");
+			} else {
+				$(obj).parent().removeClass("selected");
+			}
+    }
+    function modalShow() {
+      $('#noneTuchDialog').modal('show');
+    }
+    function modalHIde() {
+      $('#noneTuchDialog').modal('hide');
+    }
+  </script>
+</body>
+</html>

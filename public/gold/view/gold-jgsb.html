@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>交割申报</title>
+
+  <!-- Bootstrap -->
+  <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <script src="../../js/adaptation.js"></script>
+  <link href="../../css/configStyle.css" rel="stylesheet">
+  <style>
+    .btn-3b0 {background-color: #3366cc;}
+    .choose p {display: inline-block; width: 50%; text-align: center; color: #808086; line-height: 35px; height: 35px; background-color: #fff; margin-bottom: 0;}
+    .choose {margin-left: -8px; margin-right: -8px; border-bottom: 1px solid #e4e7f0;}
+    .choose p:nth-child(1) {border-right: 1px solid #e4e7f0;}
+    .nav-stacked>li+li {margin-top: 0;}
+    .nav-stacked>li {border-bottom: none; font-size: 16px;}
+    .nav-stacked>li span {color: darkgray;}
+    .nav-stacked>li:last-child {border-bottom: 1px solid #e4e7f0;}
+    .num {height: 25px; display: inline-block; float: right; color: darkgray;}
+    .num input {border-radius: 3px; width: 60px; height: 30px; border: 1px solid #e4e7f0; font-size: 15px; line-height: 15px;}
+    .type p {display: inline-block; width: 45px; text-align: center; border: 1px solid #e4e7f0; border-radius: 5px; color: #808086;}
+    .type p:nth-child(2) {border-left: none; border-top-left-radius: 0; border-bottom-left-radius: 0;}
+    .type p:nth-child(1) {border-top-right-radius: 0; border-bottom-right-radius: 0;}
+    .nav-stacked>li+li a:active {background-color: #fff;}
+    .nav-stacked .jgsb {margin-top: 5px;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="goBack" class="navbar-brand" id="goBack">
+          <img src="../../images/goback.png" alt="返回">
+        </a>
+      </div>
+      <p class="navbar-text">交割申报</p>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="clearfix">
+      <div class="choose">
+        <p>交割申报</p><p>中立仓</p>
+      </div>
+      <div class="row" id="stacked-link">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="zlc hide"><a href="gold-jgsb-list.html?par=1">合约<div style="float: right;"><span id="zlc"></span>&nbsp;&nbsp;&nbsp;<img class="more" src="../../images/more.png" alt="详细"></div></a></li>
+          <li class="jgsb"><a href="gold-jgsb-list.html?par=2">合约<div style="float: right;"><span id="jgsb"></span>&nbsp;&nbsp;&nbsp;<img class="more" src="../../images/more.png" alt="详细"></div></a></li>
+          <li><a href="#">买卖<div style="float: right;" class="type"><p class="jiaohuo">交货</p><p class="shouhuo">收货</p></div></a></li>
+          <li><a href="#">交割数量<div class="num"><input type="number" id="number"></div></a></li>
+        </ul>
+      </div>
+      <div class="btn-login">
+        <div class="col-center">
+          <a class="btn btn-block btn-3b0" onclick="order();">下单</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../js/PB.Api.js"></script>
+  <script src="../../../js/jquery-2.2.0.min.js"></script>
+  <script src="../../../js/PB.Page.js"></script>
+  <script src="../../../js/PB.Utils.js"></script>
+  <script src="../js/gold-jgsb.js"></script>
+</body>
+</html>
